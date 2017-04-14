@@ -1,0 +1,13 @@
+.scrollScreen{
+	padding-top: 60px;
+	width: 100%;
+	margin-left: 0;
+	display: inline-block;
+	vertical-align: middle;
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+.bgImage {
+	margin-top: 75px;
+}

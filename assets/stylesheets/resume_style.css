@@ -1,0 +1,33 @@
+section{
+	width: 85%;
+}
+
+
+.leftInfo {
+	float: none;
+	margin: 0;
+	align-self: initial;
+	width: 15%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 1em;
+}
+
+.resumeItem, .schoolItem {
+	display: inline-block;
+	width: 70%;
+	margin-left: 2.5%;
+}
+
+.PDFLink {
+	text-align: right;
+	position: fixed;
+	top: 0px;
+	right: 10px;
+}
+
+.PDFLink > a, a.hover, a.visited{
+	color: white;
+	text-decoration: none;
+}
+
