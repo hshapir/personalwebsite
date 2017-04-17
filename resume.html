@@ -2,8 +2,11 @@
 <html lang="en"> 
     <head>
         <title>Harrison Shapiro | Resume</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/scripts/headerScrolling.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="assets/scripts/buttonScripts.js"></script>
+        <!--<script type="text/javascript" src="assets/scripts/headerScrolling.js"></script>-->
         <meta title="Harrison Shapiro | Resume">
         <meta charset="utf-8">
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,13 +24,14 @@
                         <a href="resume.html">Resume</a>
                         <a href="index.html#work">Work</a>
                         <a href="index.html#communityService">Community Service</a>
-                        <a href="contact.html">Contact</a>
+                        <a onclick="showContact()">Contact</a>
                     </div>
                 </div>
             </nav>
             <h3 class="PDFLink"><a href="assets/resume.pdf">Click for PDF Version</a></h3>
         </header>
         
+        <div class="resume">
             <section class="resumeSection">
                 <h2>SUMMARY</h2>
                 <article>
@@ -207,8 +211,18 @@
                 </article>
 
             </section>
+        </div>
+
+        <div class="contactDialogue">
+            <button type="button" class="close" aria-label="Close" onclick="closeContact();">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>How would you like to email me?</h2>
+            <button type="button" class="btn btn-secondary" onclick="copyEmail();closeContact();">Copy Email to Clipboard</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location='mailto:harrisonclassof2018@gmail.com?subject=Reaching%20Out'; closeContact();">Link into Mail App</button>
+        </div>
         <footer>
-            <p>&copy;Harrison Shapiro 2016</p>
+            <p>&copy;Harrison Shapiro 2017</p>
         </footer>
 
     </body>
