@@ -19,11 +19,24 @@ section{
 	margin-left: 2.5%;
 }
 
-.PDFLink {
-	text-align: right;
-	position: fixed;
-	top: 0px;
-	right: 10px;
+@media (min-width: 580px){
+	.PDFLink {
+		text-align: right;
+		position: fixed;
+		top: 0px;
+		right: 10px;
+	}
+}
+
+@media (max-width: 579px){
+	.PDFLink{
+		text-align: center;
+		width: 50%;
+		position: fixed;
+		top: 20px;
+		left: 25%;
+		right: 25%;
+	}
 }
 
 .PDFLink > a, a.hover, a.visited{
