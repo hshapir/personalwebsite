@@ -3,10 +3,10 @@
 	z-index: -1;
 }
 
-.mapContainer{
-	width: 100%;
-	padding-left: 50px;
-}
+	.mapContainer{
+		width: 100%;
+		padding-left: 50px;
+	}
 
 .chicagoCircle{
 	position: absolute;
@@ -61,6 +61,24 @@
 	top: 0px;
 	left: 0px;
 	animation: animateClsLine 5s linear;
+}
+
+
+.infoPopup{
+	color: white;
+	padding: 15px;
+	padding-top: 0px;
+	height: 150px;
+	position: fixed;
+	text-align: center;
+	vertical-align: center;
+	top: 40%;
+	background-color: rgba(3, 3, 3, .8);
+	width: 30%;
+	min-width: 220px;
+	margin-left: 35%;
+	border-radius: 20px;
+	/*visibility: hidden;*/
 }
 
 @keyframes animateClsLine{
