@@ -20,7 +20,14 @@ function runAnimation(){
 	var bosButtonIterator=window.setTimeout(popUpBosButton, 4500);
 	var chlsButtonIterator=window.setTimeout(popUpChlsButton, 1200);
 	var nashButtonIterator=window.setTimeout(popUpNashButton, 2400);
-	moveWyoLine();
+	var makeInfoAppear=window.setTimeout(infoAppear, 7000);
+	var wyoButtonIterator = window.setTimeout(moveWyoLine, 0);
+}
+
+function infoAppear(){
+	var infoBox= document.getElementById("infoContainer");
+	$(infoBox).css("visibility", "visible");
+	$(infoBox).css("animation", "opacityIn 1.5s linear");
 }
 
 function moveWyoLine(){

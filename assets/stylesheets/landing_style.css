@@ -12,30 +12,39 @@
 	position: absolute;
 	top: 150px;
 	left: 680px;
+	z-index: 5;
+}
+
+.chicagoCircle > a:hover{
+	color: green;
 }
 
 .bostonCircle{
 	position: absolute;
 	top: 133px;
 	left: 955px;
+	z-index: 5;
 }
 
 .wyomingCircle{
 	position: absolute;
 	top: 90px;
 	left: 340px;
+	z-index: 5;
 }
 
 .nashvilleCircle{
 	position: absolute;
 	top: 258px;
 	left: 695px;
+	z-index: 5;
 }
 
 .charlestonCircle{
 	position: absolute;
 	top: 180px;
 	left: 665px;
+	z-index: 5;
 }
 
 .bostonLine{
@@ -67,18 +76,40 @@
 .infoPopup{
 	color: white;
 	padding: 15px;
-	padding-top: 0px;
+	padding-top: 5px;
 	height: 150px;
-	position: fixed;
 	text-align: center;
 	vertical-align: center;
-	top: 40%;
 	background-color: rgba(3, 3, 3, .8);
-	width: 30%;
-	min-width: 220px;
+	width: 300px;
 	margin-left: 35%;
 	border-radius: 20px;
-	/*visibility: hidden;*/
+}
+
+.chiPopup{
+	padding: 5px;
+	height: 140px;
+	width: 200px;
+	position: absolute;
+	top: 40px;
+	left: 10px;
+}
+
+#infoContainer{
+	position: absolute;
+	top: 300px;
+	width: 100%;
+	max-width: 1000px;
+	visibility: hidden;
+}
+
+@keyframes opacityIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 
 @keyframes animateClsLine{
