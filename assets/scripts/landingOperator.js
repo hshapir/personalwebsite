@@ -6,13 +6,24 @@ var wyoButton = null;
 var bosButton = null;
 var chlsButton = null;
 var nashButton = null;
+var chiInfo = null;
+var wyoInfo = null;
+var bosInfo = null;
+var nashInfo = null;
+var chlsInfo = null;
 var loopIterator = 0;
 var wyoPopupIterator = 0.0;
 var bosPopupIterator = 0.0;
 var nashPopupIterator = 0.0;
 var chlsPopupIterator = 0.0;
+var mainInfoVisible = false;
 
 function runAnimation(){
+	chiInfo = document.getElementById("chiInfoBox");
+	wyoInfo = document.getElementById("wyoInfoBox");
+	chlsInfo = document.getElementById("chlsInfoBox");
+	nashInfo = document.getElementById("nashInfoBox");
+	bosInfo = document.getElementById("bosInfoBox");
 	wyoLine= document.getElementById('wyoLine');
 	bosButton= document.getElementById('bosButton');
 	chlsButton= document.getElementById('chlsButton');
@@ -28,6 +39,7 @@ function infoAppear(){
 	var infoBox= document.getElementById("infoContainer");
 	$(infoBox).css("visibility", "visible");
 	$(infoBox).css("animation", "opacityIn 1.5s linear");
+	mainInfoVisible = true;
 }
 
 function moveWyoLine(){
@@ -128,4 +140,84 @@ function popUpChlsButton(){
 		}
 		var chlsButtonIterator=window.setTimeout(popUpChlsButton, .5);
 	}
+}
+
+function showChi(){
+	if(mainInfoVisible){
+		var infoBox= document.getElementById("infoContainer");
+		var hideDelay = window.setTimeout(function(){$(infoBox).css("visibility", "hidden");}, 1000);
+		$(infoBox).css("animation", "opacityOut 1.0s linear");
+		mainInfoVisible = false;
+	}
+	$(chiInfo).css("visibility", "visible");
+	$(chiInfo).css("animation", "opacityIn 0.3s linear");
+}
+function hideChi(){
+	$(chiInfo).css("animation", "opacityOut 0.3s linear");
+	var hideDelay = window.setTimeout(function(){
+		$(chiInfo).css("visibility", "hidden");}, 300);
+}
+
+function showWyo(){
+	if(mainInfoVisible){
+		var infoBox= document.getElementById("infoContainer");
+		var hideDelay = window.setTimeout(function(){$(infoBox).css("visibility", "hidden");}, 1000);
+		$(infoBox).css("animation", "opacityOut 1.0s linear");
+		mainInfoVisible = false;
+	}
+	$(wyoInfo).css("visibility", "visible");
+	$(wyoInfo).css("animation", "opacityIn 0.3s linear");
+}
+function hideWyo(){
+	$(wyoInfo).css("animation", "opacityOut 0.3s linear");
+	var hideDelay = window.setTimeout(function(){
+		$(wyoInfo).css("visibility", "hidden");}, 300);
+}
+
+function showBos(){
+	if(mainInfoVisible){
+		var infoBox= document.getElementById("infoContainer");
+		var hideDelay = window.setTimeout(function(){$(infoBox).css("visibility", "hidden");}, 1000);
+		$(infoBox).css("animation", "opacityOut 1.0s linear");
+		mainInfoVisible = false;
+	}
+	$(bosInfo).css("visibility", "visible");
+	$(bosInfo).css("animation", "opacityIn 0.3s linear");
+}
+function hideBos(){
+	$(bosInfo).css("animation", "opacityOut 0.3s linear");
+	var hideDelay = window.setTimeout(function(){
+		$(bosInfo).css("visibility", "hidden");}, 300);
+}
+
+function showChls(){
+	if(mainInfoVisible){
+		var infoBox= document.getElementById("infoContainer");
+		var hideDelay = window.setTimeout(function(){$(infoBox).css("visibility", "hidden");}, 1000);
+		$(infoBox).css("animation", "opacityOut 1.0s linear");
+		mainInfoVisible = false;
+	}
+	$(chlsInfo).css("visibility", "visible");
+	$(chlsInfo).css("animation", "opacityIn 0.3s linear");
+}
+function hideChls(){
+	$(chlsInfo).css("animation", "opacityOut 0.3s linear");
+	var hideDelay = window.setTimeout(function(){
+		$(chlsInfo).css("visibility", "hidden");}, 300);
+}
+
+function showNash(){
+	if(mainInfoVisible){
+		var infoBox= document.getElementById("infoContainer");
+		var hideDelay = window.setTimeout(function(){$(infoBox).css("visibility", "hidden");}, 1000);
+		$(infoBox).css("animation", "opacityOut 1.0s linear");
+		mainInfoVisible = false;
+	}
+	$(nashInfo).css("visibility", "visible");
+	$(nashInfo).css("animation", "opacityIn 0.3s linear");
+}
+function hideNash(){
+	$(nashInfo).css("animation", "opacityOut 0.3s linear");
+	var hideDelay = window.setTimeout(function(){
+		$(nashInfo).css("visibility", "hidden");}, 300);
 }

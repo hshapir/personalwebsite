@@ -86,13 +86,42 @@
 	border-radius: 20px;
 }
 
-.chiPopup{
+.cityPopup{
+	text-align: center;
+	vertical-align: center;
+	background-color: rgba(3, 3, 3, .8);
+	color: white;
 	padding: 5px;
 	height: 140px;
 	width: 200px;
 	position: absolute;
+	visibility: hidden;
+	border-radius: 20px;
+}
+
+.chiPopup{
 	top: 40px;
-	left: 10px;
+	left: 470px;
+}
+
+.wyoPopup{
+	left: 140px;
+	top: 40px;
+}
+
+.bosPopup{
+	left: 840px;
+	top: 190px;
+}
+
+.nashPopup{
+	left: 750px;
+	top: 220px;
+}
+
+.chlsPopup{
+	left: 450px;
+	top: 150px;
 }
 
 #infoContainer{
@@ -103,12 +132,22 @@
 	visibility: hidden;
 }
 
+
 @keyframes opacityIn{
 	0%{
 		opacity: 0;
 	}
 	100%{
 		opacity: 1;
+	}
+}
+
+@keyframes opacityOut{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
 	}
 }
 
