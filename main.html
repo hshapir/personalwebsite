@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="assets/scripts/indexScrolling.js"></script>
+        <script type="text/javascript" src="assets/scripts/buttonScripts.js"></script>
+        <title>Harrison Shapiro | Home</title>
+        <meta title="Harrison Shapiro | Home">
+        <meta charset="utf-8">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+        <link rel="stylesheet" type="text/css" href="assets/stylesheets/index_style.css">
+        <link rel="stylesheet" type="text/css" href="assets/stylesheets/scrolling_style.css">
+        <link rel="icon" href="assets/images/favicon.ico">
+    </head>
+
+    <body>
+        <header>
+            <nav class="dropdown">
+                <h1 class="dropbutton"><a href="index.html">Harrison Shapiro | A Step Ahead</a></h1>
+                <div class="dropdown-content">
+                    <div class="dropdown-background">
+                        <a href="resume.html">Resume</a>
+                        <a href="#work">Work</a>
+                        <a href="#communityService">Community Service</a>
+                        <a onclick="showContact()">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <img class="bgImage" src="assets/images/background_image.JPG"></img>
+        <div class="scrollableContent">
+            <section class="scrollScreen" id="intro">
+                <section class="box">
+                    <article>
+                        <p>I am a high school student with a deep interest in STEM. I am a proficient coder and capable of quickly learning new programming concepts. I am also a varsity track &amp; cross country athlete and the Treasurer of our school’s nationally-ranked Model UN team.</p>
+                    </article>
+                </section>
+            </section>
+            <section class="scrollScreen" id="mainContent">
+                <div class="content-section-a">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-1">
+                            <hr class="section-heading-spacer">
+                            <div class="clearfix"></div>
+                            <h2>Work</h2>
+                            <p>In the summer of 2016, I worked as a summer intern at the University of Chicago's Institute of Molecular Engineering. I designed and built a machine from scratch to biaxially stretch polymer films at the micron scale. I am also employed as a programmer for Carbonless Community, a Chicago-based organization, where I do web design and program support for an online reverse-auction platform.</p>
+                        </div>
+                        <div class="col-md-2 thumbnail">
+                            <img src="assets/images/ime_logo.png">
+                        </div>
+                        <div class="col-md-2 thumbnail">
+                            <img src="assets/images/ecLogo.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="education" class="col-md-6 col-md-offset-5">
+                        <article>
+                            <h2>Education</h2>
+                            <p>I have attended the University of Chicago Laboratory High School, in Hyde Park, Chicago, from 2003-present. The Laboratory Schools is widely considered to be one of the top private day schools in the country. My education has taught me how to think critically and find innovative solutions to difficult problems.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1 thumbnail">
+                        <img src="assets/images/ucls_logo.png">
+                    </div>
+                </div>
+                <div class="row">    
+                    <div id="communityService" class="col-md-6 col-md-offset-1">
+                        <article>
+                            <h2>Community Service</h2>
+                            <p>In 2015-2016, I volunteered at Robert Fioretti's campaign for Illinois State Senate, 5th District. I gave my time for Mr. Fioretti because I felt that, if elected, he could have helped the people of the 5th District far more than the incumbent senator. Although he lost the primary, my time on the campaign exposed me to a diverse group of people and neighborhoods that I never knew existed in my city.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4 thumbnail">
+                        <img src="assets/images/fioretti.jpg">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="contactDialogue">
+            <button type="button" class="close" aria-label="Close" onclick="closeContact();">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>How would you like to email me?</h2>
+            <button type="button" class="btn btn-secondary" onclick="copyEmail();closeContact();">Copy Email to Clipboard</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location='mailto:harrisonclassof2018@gmail.com?subject=Reaching%20Out'; closeContact();">Link into Mail App</button>
+        </div>
+        
+        <footer>
+            <p>&copy;Harrison Shapiro 2017</p>
+        </footer>
+
+    </body>
+</html>
