@@ -55,7 +55,7 @@ function runAnimation(){
 		nashButton.setAttribute("r", 7.0);
 		bosButton.setAttribute("r", 7.0);
 		chlsButton.setAttribute("r", 7.0);
-		$(wyoLink).css("z-index", 5);
+		window.alert("Looks like you're using Safari!\nDue to Safari's lack of compatibility with Keyframes/JQuery, animations are disabled.\nIf you'd like to see some really cool animations, try opening this page in Chrome/Firefox!")
 	}
 
 }
