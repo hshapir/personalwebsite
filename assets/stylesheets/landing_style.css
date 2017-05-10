@@ -13,6 +13,7 @@
 	top: 150px;
 	left: 680px;
 	z-index: 5;
+	cursor: pointer;
 }
 
 .chicagoCircle > a:hover{
@@ -24,6 +25,7 @@
 	top: 133px;
 	left: 955px;
 	z-index: 5;
+	cursor: pointer;
 }
 
 .wyomingCircle{
@@ -31,6 +33,7 @@
 	top: 90px;
 	left: 340px;
 	z-index: 5;
+	cursor: pointer;
 }
 
 .nashvilleCircle{
@@ -38,6 +41,7 @@
 	top: 258px;
 	left: 695px;
 	z-index: 5;
+	cursor: pointer;
 }
 
 .charlestonCircle{
@@ -45,19 +49,18 @@
 	top: 180px;
 	left: 665px;
 	z-index: 5;
+	cursor: pointer;
 }
 
 .bostonLine{
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	animation: animateBosLine 5s linear;
 }
 .nashvilleLine{
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	animation: animateNashLine 5s linear;
 }
 .wyomingLine{
 	position: absolute;
@@ -69,7 +72,6 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	animation: animateClsLine 5s linear;
 }
 
 

@@ -1,11 +1,19 @@
+/*
+	Author: Harrison Shapiro, 2017
+	This is all original script except for the code to detect Safari, which is courtesy of http://www.denisbouquet.com/javascript-targeting-safari-only/
+*/
 var startTime = new Date().getTime();
 var wyoX = 690.0;
 var wyoY=160.0;
 var wyoLine = null;
+var bosLine = null;
+var nashLine = null;
+var chlsLine = null;
 var wyoButton = null;
 var bosButton = null;
 var chlsButton = null;
 var nashButton = null;
+var wyoLink = null;
 var chiInfo = null;
 var wyoInfo = null;
 var bosInfo = null;
@@ -25,14 +33,31 @@ function runAnimation(){
 	nashInfo = document.getElementById("nashInfoBox");
 	bosInfo = document.getElementById("bosInfoBox");
 	wyoLine= document.getElementById('wyoLine');
+	nashLine= document.getElementById('nashLine');
+	bosLine= document.getElementById('bosLine');
+	chlsLine= document.getElementById('chlsLine');
 	bosButton= document.getElementById('bosButton');
 	chlsButton= document.getElementById('chlsButton');
 	nashButton= document.getElementById('nashButton');
-	var bosButtonIterator=window.setTimeout(popUpBosButton, 4500);
-	var chlsButtonIterator=window.setTimeout(popUpChlsButton, 1200);
-	var nashButtonIterator=window.setTimeout(popUpNashButton, 2400);
-	var makeInfoAppear=window.setTimeout(infoAppear, 7000);
-	var wyoButtonIterator = window.setTimeout(moveWyoLine, 0);
+	wyoButton = document.getElementById('wyoCircle');
+	if(!(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)){
+		$(bosLine).css("animation", "animateBosLine 5s linear");
+		$(nashLine).css("animation", "animateNashLine 5s linear");
+		$(chlsLine).css("animation", "animateClsLine 5s linear");
+		var bosButtonIterator=window.setTimeout(popUpBosButton, 4500);
+		var chlsButtonIterator=window.setTimeout(popUpChlsButton, 1200);
+		var nashButtonIterator=window.setTimeout(popUpNashButton, 2400);
+		var makeInfoAppear=window.setTimeout(infoAppear, 7000);
+		var wyoButtonIterator = window.setTimeout(moveWyoLine, 0);
+	}else{
+		wyoLink = document.getElementById("wyoLink");
+		wyoButton.setAttribute("r", 7.0);
+		nashButton.setAttribute("r", 7.0);
+		bosButton.setAttribute("r", 7.0);
+		chlsButton.setAttribute("r", 7.0);
+		$(wyoLink).css("z-index", 5);
+	}
+
 }
 
 function infoAppear(){
@@ -55,46 +80,6 @@ function moveWyoLine(){
 }
 
 function popUpWyoButton(){
-	wyoButton = document.getElementById("wyoCircle");
-	if(wyoPopupIterator < 100){
-		wyoPopupIterator++;
-		if(wyoPopupIterator<70){
-			wyoButton.setAttribute("r", wyoPopupIterator*12.0/70.0);
-		}else{
-			wyoButton.setAttribute("r", 12.0-(wyoPopupIterator-70.0)*(5.0)/30.0);
-		}
-		var wyoButtonIterator=window.setTimeout(popUpWyoButton, .5);
-	}
-}
-
-function popUpBosButton(){
-	wyoButton = document.getElementById("wyoCircle");
-	if(wyoPopupIterator < 100){
-		wyoPopupIterator++;
-		if(wyoPopupIterator<70){
-			wyoButton.setAttribute("r", wyoPopupIterator*12.0/70.0);
-		}else{
-			wyoButton.setAttribute("r", 12.0-(wyoPopupIterator-70.0)*(5.0)/30.0);
-		}
-		var wyoButtonIterator=window.setTimeout(popUpWyoButton, .5);
-	}
-}
-
-function popUpWyoButton(){
-	wyoButton = document.getElementById("wyoCircle");
-	if(wyoPopupIterator < 100){
-		wyoPopupIterator++;
-		if(wyoPopupIterator<70){
-			wyoButton.setAttribute("r", wyoPopupIterator*12.0/70.0);
-		}else{
-			wyoButton.setAttribute("r", 12.0-(wyoPopupIterator-70.0)*(5.0)/30.0);
-		}
-		var wyoButtonIterator=window.setTimeout(popUpWyoButton, .5);
-	}
-}
-
-function popUpWyoButton(){
-	wyoButton = document.getElementById("wyoCircle");
 	if(wyoPopupIterator < 100){
 		wyoPopupIterator++;
 		if(wyoPopupIterator<70){
@@ -143,6 +128,7 @@ function popUpChlsButton(){
 }
 
 function showChi(){
+	chiButton = document.getElementById("chiColor");
 	if(mainInfoVisible){
 		var infoBox= document.getElementById("infoContainer");
 		var hideDelay = window.setTimeout(function(){$(infoBox).css("visibility", "hidden");}, 1000);
@@ -151,11 +137,16 @@ function showChi(){
 	}
 	$(chiInfo).css("visibility", "visible");
 	$(chiInfo).css("animation", "opacityIn 0.3s linear");
+	chiButton.setAttribute("fill", "green");
+	chiButton = document.getElementById("chiButton");
 }
 function hideChi(){
+	chiButton = document.getElementById("chiColor");
 	$(chiInfo).css("animation", "opacityOut 0.3s linear");
 	var hideDelay = window.setTimeout(function(){
-		$(chiInfo).css("visibility", "hidden");}, 300);
+	$(chiInfo).css("visibility", "hidden");}, 300);
+	chiButton.setAttribute("fill", "blue");
+	chiButton = document.getElementById("chiButton");
 }
 
 function showWyo(){
@@ -167,11 +158,13 @@ function showWyo(){
 	}
 	$(wyoInfo).css("visibility", "visible");
 	$(wyoInfo).css("animation", "opacityIn 0.3s linear");
+	wyoButton.setAttribute("fill", "green");
 }
 function hideWyo(){
 	$(wyoInfo).css("animation", "opacityOut 0.3s linear");
 	var hideDelay = window.setTimeout(function(){
-		$(wyoInfo).css("visibility", "hidden");}, 300);
+	$(wyoInfo).css("visibility", "hidden");}, 300);
+	wyoButton.setAttribute("fill", "blue");
 }
 
 function showBos(){
@@ -183,11 +176,13 @@ function showBos(){
 	}
 	$(bosInfo).css("visibility", "visible");
 	$(bosInfo).css("animation", "opacityIn 0.3s linear");
+	bosButton.setAttribute("fill", "green");
 }
 function hideBos(){
 	$(bosInfo).css("animation", "opacityOut 0.3s linear");
 	var hideDelay = window.setTimeout(function(){
-		$(bosInfo).css("visibility", "hidden");}, 300);
+	$(bosInfo).css("visibility", "hidden");}, 300);
+	bosButton.setAttribute("fill", "blue");
 }
 
 function showChls(){
@@ -199,11 +194,13 @@ function showChls(){
 	}
 	$(chlsInfo).css("visibility", "visible");
 	$(chlsInfo).css("animation", "opacityIn 0.3s linear");
+	chlsButton.setAttribute("fill", "green");
 }
 function hideChls(){
 	$(chlsInfo).css("animation", "opacityOut 0.3s linear");
 	var hideDelay = window.setTimeout(function(){
-		$(chlsInfo).css("visibility", "hidden");}, 300);
+	$(chlsInfo).css("visibility", "hidden");}, 300);
+	chlsButton.setAttribute("fill", "blue");
 }
 
 function showNash(){
@@ -215,9 +212,11 @@ function showNash(){
 	}
 	$(nashInfo).css("visibility", "visible");
 	$(nashInfo).css("animation", "opacityIn 0.3s linear");
+	nashButton.setAttribute("fill", "green");
 }
 function hideNash(){
 	$(nashInfo).css("animation", "opacityOut 0.3s linear");
 	var hideDelay = window.setTimeout(function(){
-		$(nashInfo).css("visibility", "hidden");}, 300);
+	$(nashInfo).css("visibility", "hidden");}, 300);
+	nashButton.setAttribute("fill", "blue");
 }
