@@ -4,7 +4,7 @@
 */
 var startTime = new Date().getTime();
 var wyoX = 690.0;
-var wyoY=160.0;
+var wyoY=220.0;
 var wyoLine = null;
 var bosLine = null;
 var nashLine = null;
@@ -70,7 +70,7 @@ function infoAppear(){
 function moveWyoLine(){
 	wyoX -= 330/1000;
 	wyoY -= 50/1000;
-	wyoLine.setAttribute("d", "M690,160 A400,200 0 0,0 "+wyoX+","+wyoY);
+	wyoLine.setAttribute("d", "M690,220 A400,260 0 0,0 "+wyoX+","+wyoY);
 	if(loopIterator< 1000){
 		loopIterator++;
 		var wyomingIterator=window.setTimeout(moveWyoLine, 5);

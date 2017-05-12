@@ -6,11 +6,12 @@
 	.mapContainer{
 		width: 100%;
 		padding-left: 50px;
+		padding-top: 60px;
 	}
 
 .chicagoCircle{
 	position: absolute;
-	top: 150px;
+	top: 210px;
 	left: 680px;
 	z-index: 5;
 	cursor: pointer;
@@ -22,7 +23,7 @@
 
 .bostonCircle{
 	position: absolute;
-	top: 133px;
+	top: 193px;
 	left: 955px;
 	z-index: 5;
 	cursor: pointer;
@@ -30,7 +31,7 @@
 
 .wyomingCircle{
 	position: absolute;
-	top: 90px;
+	top: 150px;
 	left: 340px;
 	z-index: 5;
 	cursor: pointer;
@@ -38,7 +39,7 @@
 
 .nashvilleCircle{
 	position: absolute;
-	top: 258px;
+	top: 318px;
 	left: 695px;
 	z-index: 5;
 	cursor: pointer;
@@ -46,7 +47,7 @@
 
 .charlestonCircle{
 	position: absolute;
-	top: 180px;
+	top: 240px;
 	left: 665px;
 	z-index: 5;
 	cursor: pointer;
@@ -102,28 +103,28 @@
 }
 
 .chiPopup{
-	top: 40px;
+	top: 100px;
 	left: 470px;
 }
 
 .wyoPopup{
 	left: 140px;
-	top: 40px;
+	top: 100px;
 }
 
 .bosPopup{
 	left: 840px;
-	top: 190px;
+	top: 250px;
 }
 
 .nashPopup{
 	left: 750px;
-	top: 220px;
+	top: 280px;
 }
 
 .chlsPopup{
 	left: 450px;
-	top: 150px;
+	top: 210px;
 }
 
 #infoContainer{
@@ -155,19 +156,19 @@
 
 @keyframes animateClsLine{
 	0%{
-		height: 165px;
+		height: 225px;
 	}
 	100%{
-		height: 300px;
+		height: 360px;
 	}
 }
 
 @keyframes animateNashLine{
 	0%{
-		height: 165px;
+		height: 225px;
 	}
 	100%{
-		height: 400px;
+		height: 460px;
 	}
 }
 
