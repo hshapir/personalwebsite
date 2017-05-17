@@ -21,11 +21,26 @@
 	}
 }*/
 
-	.mapContainer{
-		width: 100%;
-		padding-left: 50px;
-		padding-top: 60px;
-	}
+.homeIcon{
+	text-align: center;
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	height: 40px;
+	width: 40px;
+	background-color: transparent;
+	border: none;
+}
+
+.homeGlyph{
+	font-size: 25px;
+}
+
+.mapContainer{
+	width: 100%;
+	padding-left: 50px;
+	padding-top: 60px;
+}
 
 .chicagoCircle{
 	position: absolute;
