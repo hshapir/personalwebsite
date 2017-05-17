@@ -3,6 +3,24 @@
 	z-index: -1;
 }
 
+/*@media(max-width: 1000px){
+	.wideScreen{
+		visibility: hidden;
+	}
+	.narrowScreen{
+		visibility: visible;
+	}
+}
+
+@media(min-width: 1000px){
+	.wideScreen{
+		visibility: visible;
+	}
+	.narrowScreen{
+		visibility: hidden;
+	}
+}*/
+
 	.mapContainer{
 		width: 100%;
 		padding-left: 50px;

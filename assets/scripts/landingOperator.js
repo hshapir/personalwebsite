@@ -49,13 +49,20 @@ function runAnimation(){
 		var nashButtonIterator=window.setTimeout(popUpNashButton, 2400);
 		var makeInfoAppear=window.setTimeout(infoAppear, 7000);
 		var wyoButtonIterator = window.setTimeout(moveWyoLine, 0);
+	}else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		wyoLink = document.getElementById("wyoLink");
+		wyoButton.setAttribute("r", 7.0);
+		nashButton.setAttribute("r", 7.0);
+		bosButton.setAttribute("r", 7.0);
+		chlsButton.setAttribute("r", 7.0);
+		window.alert("Looks like you're on a mobile device!\nDue to weird computer stuff, animations are disabled.\nTap circles on the map to see cool info and link to new pages. Otherwise, just click the home button on the top right!");
 	}else{
 		wyoLink = document.getElementById("wyoLink");
 		wyoButton.setAttribute("r", 7.0);
 		nashButton.setAttribute("r", 7.0);
 		bosButton.setAttribute("r", 7.0);
 		chlsButton.setAttribute("r", 7.0);
-		window.alert("Looks like you're using Safari!\nDue to Safari's lack of compatibility with Keyframes/JQuery, animations are disabled.\nIf you'd like to see some really cool animations, try opening this page in Chrome/Firefox!")
+		window.alert("Looks like you're using Safari!\nDue to Safari's lack of compatibility with Keyframes/JQuery, animations are disabled.\nIf you'd like to see some really cool animations, try opening this page in Chrome/Firefox!");
 	}
 
 }
