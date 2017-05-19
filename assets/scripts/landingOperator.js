@@ -25,6 +25,8 @@ var bosPopupIterator = 0.0;
 var nashPopupIterator = 0.0;
 var chlsPopupIterator = 0.0;
 var mainInfoVisible = false;
+var isSmall = false;
+var redirectTime;
 
 function runAnimation(){
 	chiInfo = document.getElementById("chiInfoBox");
@@ -40,6 +42,8 @@ function runAnimation(){
 	chlsButton= document.getElementById('chlsButton');
 	nashButton= document.getElementById('nashButton');
 	wyoButton = document.getElementById('wyoCircle');
+	checkWinSize();
+	window.addEventListener('resize', function(event){checkWinSize();});
 	if(!(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)){
 		$(bosLine).css("animation", "animateBosLine 5s linear");
 		$(nashLine).css("animation", "animateNashLine 5s linear");
@@ -226,4 +230,25 @@ function hideNash(){
 	var hideDelay = window.setTimeout(function(){
 	$(nashInfo).css("visibility", "hidden");}, 300);
 	nashButton.setAttribute("fill", "blue");
+}
+
+function checkWinSize(){
+	if(isSmall){
+		if(window.innerWidth > 1000){
+			isSmall = false;
+			window.location="landing.html";
+		}
+	}else{
+		if(window.innerWidth < 1000){
+			isSmall = true;
+			var redirector = window.setTimeout(resizeRedirector, 5000);
+		}
+
+	}
+}
+
+function resizeRedirector(){
+	if(isSmall){
+		window.location="main.html";
+	}
 }
