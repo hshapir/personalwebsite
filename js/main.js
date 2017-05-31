@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 	$('body').css("overflow", "hidden");
     setTimeout(function() {
         $('body').addClass('loaded');
@@ -8,7 +8,7 @@ $(document).ready(function() {
     setTimeout(function() {
     	$('body').css("animation", "bodyOut 0.5s linear");
     }, 2500);
-  });
+  });*/
 
 function closeContact(){
     $('.contactDialogue').css("visibility", "hidden");
