@@ -79,12 +79,12 @@ function infoAppear(){
 }
 
 function moveWyoLine(){
-	wyoX -= 330/1000;
-	wyoY -= 50/1000;
+	wyoX -= 330/100;
+	wyoY -= 50/100;
 	wyoLine.setAttribute("d", "M690,220 A400,260 0 0,0 "+wyoX+","+wyoY);
-	if(loopIterator< 1000){
+	if(loopIterator< 100){
 		loopIterator++;
-		var wyomingIterator=window.setTimeout(moveWyoLine, 5);
+		var wyomingIterator=window.setTimeout(moveWyoLine, 45);
 	}else{
 		popUpWyoButton();
 	}
@@ -115,12 +115,12 @@ function popUpBosButton(){
 }
 
 function popUpNashButton(){
-	if(nashPopupIterator < 100){
+	if(nashPopupIterator < 50){
 		nashPopupIterator++;
-		if(nashPopupIterator<70){
-			nashButton.setAttribute("r", nashPopupIterator*12.0/70.0);
+		if(nashPopupIterator<35){
+			nashButton.setAttribute("r", nashPopupIterator*12.0/35.0);
 		}else{
-			nashButton.setAttribute("r", 12.0-(nashPopupIterator-70.0)*(5.0)/30.0);
+			nashButton.setAttribute("r", 12.0-(nashPopupIterator-35.0)*(5.0)/15.0);
 		}
 		var nashButtonIterator=window.setTimeout(popUpNashButton, .5);
 	}

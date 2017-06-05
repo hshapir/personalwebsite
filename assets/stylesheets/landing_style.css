@@ -186,6 +186,15 @@
 	}
 }
 
+@keyframes waveOpacIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0.35;
+	}
+}
+
 @keyframes opacityOut{
 	0%{
 		opacity: 1;
