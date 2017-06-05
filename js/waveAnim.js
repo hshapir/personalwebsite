@@ -19,6 +19,7 @@ function initWaves() {
   document.body.appendChild(div);
   div.style.position = "fixed";
   div.style.zIndex = "-99";
+  div.style.opacity = "0.35";
   canvas.style.zIndex = "-100";
   canvas.style.position = "absolute";  
   div.appendChild(canvas);
