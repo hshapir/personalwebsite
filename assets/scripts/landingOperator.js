@@ -51,7 +51,7 @@ function runAnimation(){
 		var bosButtonIterator=window.setTimeout(popUpBosButton, 4500);
 		var chlsButtonIterator=window.setTimeout(popUpChlsButton, 1200);
 		var nashButtonIterator=window.setTimeout(popUpNashButton, 2400);
-		var makeInfoAppear=window.setTimeout(infoAppear, 7000);
+		var makeInfoAppear=window.setTimeout(infoAppear, 0);
 		var wyoButtonIterator = window.setTimeout(moveWyoLine, 0);
 	}else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		wyoLink = document.getElementById("wyoLink");
